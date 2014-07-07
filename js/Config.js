@@ -1,4 +1,4 @@
-var baseUrl = "http://localhost:8080";
+var baseUrl = "http://daneshm.tk:8080";
 var loadingStartConst = 'loading-started';
 var loadingCompleteConst = 'loading-complete';
-var delayHttpDuration = 1000;
+var delayHttpDuration = 100;

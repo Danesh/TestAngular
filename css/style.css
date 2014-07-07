@@ -1,0 +1,7 @@
+body {
+    padding-top: 50px;
+}
+.ng-hide:not(.ng-animate) {
+    visibility: hidden !important;
+    display: block !important;
+}

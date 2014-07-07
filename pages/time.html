@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="WidgetsApp">
+<head>
+    <style>
+        .time-display {
+            padding: 40px 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div ng-controller="timeController">
+    <h1 class="time-display">
+        {{ currentTime | date : 'yyyy-MM-dd HH:mm:ss'}}
+    </h1>
+</div>
+</body>
+</html>

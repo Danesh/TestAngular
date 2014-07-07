@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="WidgetsApp">
+<head>
+</head>
+<body>
+<div ng-controller="widgetController">
+    <form name="widgetsForm" role="form" ng-submit="submit()">
+        <h4>Add a widget :</h4>
+        <input type="text" ng-model="widgetName" name="widgetName" class="form-control"
+               placeholder="Enter widget name" title="Minimum 4 of characters (Only alphabets and numbers)"
+               pattern="[a-zA-Z0-9]{4,}" required/>
+        <br />
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Add</button>
+    </form>
+    <br />
+    <div ng-hide="hasWidgets">
+        <h4>No widgets found</h4>
+    </div>
+    <div class="table-responsive" ng-show="hasWidgets">
+        <h4>Widgets :</h4>
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Date Created</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="widget in allWidgets">
+                <td>{{ widget.id }}</td>
+                <td>{{ widget.name }}</td>
+                <td>{{ widget.dateCreated | date : 'fullDate'}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+</body>
+</html>
